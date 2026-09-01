@@ -1,0 +1,47 @@
+# Media configuration for images uploaded through Pages CMS
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: blog
+    label: Blog Posts
+    type: collection
+    path: src/content/blog
+    format: md
+    # Automatically generates the filename/slug from the title field
+    filename: "{slug}"
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: pubDate
+        label: Publication Date
+        type: date
+        required: true
+
+      - name: description
+        label: Description / Excerpt
+        type: string
+        required: true
+
+      - name: heroImage
+        label: Hero Image
+        type: image
+
+      - name: draft
+        label: Draft Status
+        type: boolean
+        default: false
+
+      - name: tags
+        label: Tags
+        type: list
+        field:
+          type: string
+
+      - name: body
+        label: Content
+        type: rich-text
