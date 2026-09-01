@@ -1,46 +1,11 @@
-media:
-  input: public/images
-  output: /images
-
+media: media
 content:
-  - name: blog
-    label: Blog Posts
+  - name: posts
+    label: Posts
     type: collection
-    path: src/content/blog
-    format: mdx
-    filename: "{slug}"
+    path: content/posts
     fields:
       - name: title
-        label: Title
         type: string
-        required: true
-        primary: true
-
-      - name: pubDate
-        label: Publication Date
-        type: date
-        required: true
-
-      - name: description
-        label: Description / Excerpt
-        type: string
-        required: true
-
-      - name: heroImage
-        label: Hero Image
-        type: image
-
-      - name: draft
-        label: Draft Status
-        type: boolean
-        default: false
-
-      - name: tags
-        label: Tags
-        type: list
-        field:
-          type: string
-
       - name: body
-        label: Content
         type: rich-text
