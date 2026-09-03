@@ -4,6 +4,8 @@ content:
     label: Posts
     type: collection
     path: content/posts
+        format: mdx
+    extension: mdx
     fields:
       - name: title
         type: string
